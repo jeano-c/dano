@@ -3,9 +3,10 @@ import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 function App() {
-  const fadeInUp = {
+  const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
