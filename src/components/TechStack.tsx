@@ -73,13 +73,13 @@ export default function TechStack() {
   ];
 
   return (
-    <section className="px-6 lg:px-20 py-20 bg-[#f8f9fa]" id="stack">
+    <section className="px-4 sm:px-6 lg:px-20 py-10 sm:py-14 md:py-20 bg-[#f8f9fa]" id="stack">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center gap-6 mb-16 w-full">
-          <h2 className="text-5xl lg:text-6xl font-epilogue font-black uppercase italic tracking-tighter text-[#2D2F2F] whitespace-nowrap">
+        <div className="flex items-center gap-3 sm:gap-6 mb-8 sm:mb-12 md:mb-16 w-full">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-epilogue font-black uppercase italic tracking-tighter text-[#2D2F2F] whitespace-nowrap">
             The Stack
           </h2>
-          <div className="flex-1 h-3 lg:h-4 bg-black"></div>
+          <div className="flex-1 h-2 sm:h-3 lg:h-4 bg-black"></div>
         </div>
         <SkillCom title="Backend Core" skills={skilsBackend} />
         <SkillCom title="Frontend & Mobile" skills={skilsFrontend} />

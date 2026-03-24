@@ -47,38 +47,38 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-24 px-6 lg:px-20 bg-[#f8f9fa]">
+    <section id="projects" className="py-10 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-20 bg-[#f8f9fa]">
       {/* --- NEW HEADER DESIGN STARTS HERE --- */}
-      <div className="w-full flex flex-col items-center mb-16 md:mb-24">
+      <div className="w-full flex flex-col items-center mb-8 md:mb-24">
         {/* Little folder tab detail */}
-        <div className="bg-[#FFB7B7] border-[3px] border-black border-b-0 px-6 py-1 -mb-[3px] z-10 font-space font-bold text-xs uppercase tracking-widest text-black">
+        <div className="bg-[#FFB7B7] border-[2px] sm:border-[3px] border-black border-b-0 px-3 sm:px-6 py-1 -mb-[2px] sm:-mb-[3px] z-10 font-space font-bold text-[10px] sm:text-xs uppercase tracking-widest text-black">
           Classified Files
         </div>
 
         {/* Main Header Box */}
         <div className="relative group inline-block cursor-default">
           {/* Offset Shadow */}
-          <div className="absolute inset-0 bg-black translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300"></div>
+          <div className="absolute inset-0 bg-black translate-x-1 sm:translate-x-2 translate-y-1 sm:translate-y-2 group-hover:translate-x-2 sm:group-hover:translate-x-3 group-hover:translate-y-2 sm:group-hover:translate-y-3 transition-transform duration-300"></div>
 
           {/* Main Container */}
-          <div className="relative bg-[#FFD709] border-[3px] border-black px-6 py-4 md:px-10 md:py-5 group-hover:-translate-y-1 group-hover:-translate-x-1 transition-all duration-300 flex items-center gap-4 md:gap-6">
-            <div className="w-3 h-3 md:w-4 md:h-4 bg-black rounded-full animate-pulse"></div>
+          <div className="relative bg-[#FFD709] border-[2px] sm:border-[3px] border-black px-4 sm:px-6 md:px-10 py-2 sm:py-4 md:py-5 group-hover:-translate-y-1 group-hover:-translate-x-1 transition-all duration-300 flex items-center gap-2 md:gap-6">
+            <div className="w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 bg-black rounded-full animate-pulse"></div>
 
-            <h2 className="font-epilogue text-3xl md:text-5xl lg:text-6xl font-black uppercase italic tracking-widest text-black">
+            <h2 className="font-epilogue text-xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase italic tracking-widest text-black">
               Top Secret
             </h2>
 
-            <div className="w-3 h-3 md:w-4 md:h-4 bg-black rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 bg-black rounded-full animate-pulse"></div>
           </div>
         </div>
-        <p className="mt-8 font-space font-bold text-xs md:text-sm text-[#757777] uppercase tracking-widest text-center max-w-lg">
+        <p className="mt-4 md:mt-8 font-space font-bold text-[10px] sm:text-xs md:text-sm text-[#757777] uppercase tracking-widest text-center max-w-lg px-4">
           Declassified records of recent development operations and technical
           case studies.
         </p>
       </div>
 
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-14">
           {projects.map((project) => (
             <Card key={project.id} project={project} />
           ))}
