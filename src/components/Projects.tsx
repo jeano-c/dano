@@ -44,10 +44,85 @@ export default function Projects() {
       ],
       btnColor: "bg-[#005B70]",
     },
+    {
+      id: 4,
+      logName: "CASE_STUDY_004.LOG",
+      headerColor: "bg-[#E0F2F1]", // Very soft teal/mint (clean on white)
+      title: "Smart POS & Inventory",
+      description:
+        "A comprehensive POS system built with Django featuring 'Stack Watcher' for intelligent inventory monitoring, Linear Regression for profit forecasting, and AI-generated business summaries.",
+      tags: [
+        { name: "Django", color: "bg-[#80CBC4]" },
+        { name: "Python", color: "bg-[#90CAF9]" },
+        { name: "Scikit-Learn", color: "bg-[#FFCC80]" },
+        { name: "AI/ML", color: "bg-[#CE93D8]" },
+      ],
+      btnColor: "bg-[#4DB6AC]",
+    },
+    {
+      id: 5,
+      logName: "CASE_STUDY_005.LOG",
+      headerColor: "bg-[#FFF4E0]",
+      title: "Busog Banyaga",
+      description:
+        "A Philippine-themed tower defense game featuring custom-designed sprites of iconic vehicles like jeepneys and tricycles, with unique local-inspired defense mechanics.",
+      tags: [
+        { name: "Unity", color: "bg-[#FFCCBC]" },
+        { name: "C#", color: "bg-[#D1C4E9]" },
+        { name: "Game Dev", color: "bg-[#C8E6C9]" },
+      ],
+      btnColor: "bg-[#FFAB91]", // Warm Terracotta
+    },
+    {
+      id: 6,
+      logName: "CASE_STUDY_006.LOG",
+      headerColor: "bg-[#E3F2FD]",
+      title: "The Chore",
+      description:
+        "A Unity simulation project where daily house chores and school tasks—from washing dishes to daily scrum meetings—are gamified into a series of interactive minigames.",
+      tags: [
+        { name: "Unity", color: "bg-[#BBDEFB]" },
+        { name: "C#", color: "bg-[#D1C4E9]" },
+      ],
+      btnColor: "bg-[#90CAF9]", // Balanced Blue
+    },
+    {
+      id: 7,
+      logName: "CASE_STUDY_07.LOG",
+      headerColor: "bg-[#FCE4EC]", // Very soft pastel pink
+      title: "Anime Tracker & Community",
+      description:
+        "A social anime discovery platform utilizing the Kitsu.io API. Features include personalized watchlists, real-time commenting systems, and a community 'like' interaction for user discussions.",
+      tags: [
+        { name: "Node.js", color: "bg-[#E8F5E9]" }, // Soft Mint
+        { name: "React", color: "bg-[#E1F5FE]" }, // Soft Blue
+        { name: "Kitsu API", color: "bg-[#F8BBD0]" }, // Muted Pink
+        { name: "Express", color: "bg-[#F5F5F5]" }, // Light Grey
+      ],
+      btnColor: "bg-[#F06292]", // Balanced Rose (visible on white)
+    },
+    {
+      id: 8,
+      logName: "CASE_STUDY_08.LOG",
+      headerColor: "bg-[#F1F5F9]", // Very light slate (clean and modern)
+      title: "Social Engine API",
+      description:
+        "A high-performance, backend-only REST API built with C# and ASP.NET Core. It manages the core logic for a social platform, including secure authentication, relational data for followers, and complex feed queries.",
+      tags: [
+        { name: "C#", color: "bg-[#E1BEE7]" }, // Soft Purple (C# signature)
+        { name: "ASP.NET Core", color: "bg-[#BBDEFB]" }, // Light Blue
+        { name: "REST API", color: "bg-[#CFD8DC]" }, // Muted Grey
+        { name: "Entity Framework", color: "bg-[#DCEDC8]" }, // Pale Mint
+      ],
+      btnColor: "bg-[#475569]", // Deep Slate (sharp contrast on white)
+    },
   ];
 
   return (
-    <section id="projects" className="py-10 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-20 bg-[#f8f9fa]">
+    <section
+      id="projects"
+      className="py-10 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-20 bg-[#f8f9fa]"
+    >
       {/* --- NEW HEADER DESIGN STARTS HERE --- */}
       <div className="w-full flex flex-col items-center mb-8 md:mb-24">
         {/* Little folder tab detail */}
