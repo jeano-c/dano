@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <main className="px-2 sm:px-4 md:px-6 pt-2 sm:pt-4 bg-[#f8f9fa] !smooth-scroll overflow-x-hidden">
+    <main className="bg-[#f8f9fa]">
       <NavBar />
       <motion.div
         initial="hidden"

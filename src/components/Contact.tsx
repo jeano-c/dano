@@ -6,19 +6,19 @@ export default function Contact() {
     {
       name: "LinkedIn",
       icon: <FaLinkedin />,
-      href: "www.linkedin.com/in/jeano-cabanjen-9a3892362", // Replace with your LinkedIn
+      href: "https://www.linkedin.com/in/jeano-cabanjen-9a3892362",
       bg: "bg-[#0077B5]",
     },
     {
       name: "Gmail",
       icon: <MdEmail />,
-      href: "mailto:cabanjenjeaano@gmail.com", // Replace with your email
+      href: "mailto:cabanjenjeaano@gmail.com",
       bg: "bg-[#EA4335]",
     },
     {
       name: "Facebook",
       icon: <FaFacebook />,
-      href: "https://www.facebook.com/jeano.cabanjen.1/", // Replace with your Facebook
+      href: "https://www.facebook.com/jeano.cabanjen.1/",
       bg: "bg-[#1877F2]",
     },
   ];
