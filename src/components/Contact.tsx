@@ -1,6 +1,6 @@
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-
+import { FaGithub } from "react-icons/fa";
 export default function Contact() {
   const socials = [
     {
@@ -20,6 +20,12 @@ export default function Contact() {
       icon: <FaFacebook />,
       href: "https://www.facebook.com/jeano.cabanjen.1/",
       bg: "bg-[#1877F2]",
+    },
+    {
+      name: "GitHub",
+      icon: <FaGithub />,
+      href: "https://github.com/jeano-c",
+      bg: "bg-[#333]",
     },
   ];
 
