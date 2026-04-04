@@ -11,6 +11,7 @@ export default function Projects() {
       title: "Form Builder",
       link: "https://www.ispecmn.site/",
       linkText: "website",
+      linkType: "website",
       description: "A drag and drop form builder with AI integration.",
       tags: [
         { name: "React Vite", color: "bg-[#A2DFFF]" },
@@ -25,6 +26,10 @@ export default function Projects() {
       logName: "CASE_STUDY_002.LOG",
       headerColor: "bg-[#73D2FA]",
       title: "Ecompare",
+      image: ecompare,
+      link: "https://ecompare.site/",
+      linkText: "website",
+      linkType: "website",
       description:
         "A price comparison Website for e-commerce products with Ai Recomendation.",
       tags: [
@@ -41,6 +46,7 @@ export default function Projects() {
 
       title: "Attendance System",
       linkText: "github",
+      linkType: "github",
       link: "https://github.com/jeano-c/rcy",
       description:
         "An app made with React Native Expo and Appwrite backend; attendance system for students utilizing QR codes and real-time updates.",
@@ -56,6 +62,7 @@ export default function Projects() {
       logName: "CASE_STUDY_004.LOG",
       headerColor: "bg-[#E0F2F1]",
       linkText: "github",
+      linkType: "github",
       link: "https://github.com/jeano-c/event_drive",
       title: "Smart POS & Inventory",
       description:
@@ -89,6 +96,7 @@ export default function Projects() {
       headerColor: "bg-[#E3F2FD]",
       link: "https://busogbanyaga.itch.io/the-chore?brid=33smqJMVFpHF-ANMbNdQgA&fbclid=IwY2xjawQ9z79leHRuA2FlbQIxMABicmlkETFldzFhTk1GQTNCdUxpOHhPc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHl9P4lFvW-9XnYYrGoqcHzVhdHUXUbRmIRRaVbOPQ8m6S4sD4DZn8B6lQYi7_aem_s8uqSaj7kq4QhLaZXvGsyw",
       linkText: "itch.io",
+      linkType: "itch",
       title: "The Chore",
       description:
         "A Unity simulation project where daily house chores and school tasks—from washing dishes to daily scrum meetings—are gamified into a series of interactive minigames.",
@@ -138,7 +146,7 @@ export default function Projects() {
       {/* --- NEW HEADER DESIGN STARTS HERE --- */}
       <div className="w-full flex flex-col items-center mb-8 md:mb-24">
         {/* Little folder tab detail */}
-        <div className="bg-[#FFB7B7] border-2 sm:border-[3px] border-black border-b-0 px-3 sm:px-6 py-1 -mb-[2px] sm:-mb-[3px] z-10 font-space font-bold text-[10px] sm:text-xs uppercase tracking-widest text-black">
+        <div className="bg-[#FFB7B7] border-2 sm:border-[3px] border-black border-b-0 px-3 sm:px-6 py-1 -mb-[2px] sm:-mb-0.75 z-10 font-space font-bold text-[10px] sm:text-xs uppercase tracking-widest text-black">
           Classified Files
         </div>
 

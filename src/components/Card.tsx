@@ -1,3 +1,5 @@
+import { FaGithub, FaGlobe, FaItchIo } from "react-icons/fa6";
+
 export interface Tag {
   name: string;
   color: string;
@@ -15,6 +17,7 @@ export interface Project {
   video?: string;
   link?: string;
   linkText?: string;
+  linkType?: "github" | "website" | "itch" | "none";
 }
 
 interface CardProps {
@@ -83,8 +86,11 @@ export default function Card({ project }: CardProps) {
                 window.open(project.link, "_blank", "noopener,noreferrer");
               }
             }}
-            className={`mt-auto cursor-pointer w-full border-2 sm:border-[3px] border-black py-2 sm:py-3 md:py-4 font-space font-bold text-white uppercase tracking-widest text-xs sm:text-sm md:text-base ${project.btnColor} shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all duration-200`}
+            className={`mt-auto flex items-center justify-center gap-2 cursor-pointer w-full border-2 sm:border-[3px] border-black py-2 sm:py-3 md:py-4 font-space font-bold text-white uppercase tracking-widest text-xs sm:text-sm md:text-base ${project.btnColor} shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all duration-200`}
           >
+            {project.linkType === "github" && <FaGithub className="text-lg" />}
+            {project.linkType === "website" && <FaGlobe className="text-lg" />}
+            {project.linkType === "itch" && <FaItchIo className="text-xl" />}
             {project.linkText || "Open File"}
           </button>
         </div>
