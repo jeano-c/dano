@@ -36,13 +36,13 @@ export default function Card({ project }: CardProps) {
           <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#FFCC00] border-[1.5px] sm:border-2 border-black"></div>
           <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#34C759] border-[1.5px] sm:border-2 border-black"></div>
         </div>
-        <span className="font-space font-bold text-[10px] sm:text-xs tracking-widest uppercase text-black">
+        <span className="max-w-[65%] truncate text-right font-space font-bold text-[9px] sm:text-xs tracking-widest uppercase text-black">
           {project.logName}
         </span>
       </div>
 
       <div className="flex flex-col flex-1">
-        <div className="w-full h-48 sm:h-56 md:h-64 border-b-2 sm:border-b-[3px] border-black overflow-hidden relative">
+        <div className="w-full h-40 sm:h-56 md:h-64 border-b-2 sm:border-b-[3px] border-black overflow-hidden relative">
           {project.video ? (
             <video
               src={project.video}
@@ -61,11 +61,11 @@ export default function Card({ project }: CardProps) {
           ) : null}
         </div>
 
-        <div className="mt-1 sm:mt-2 flex flex-col flex-1 px-3 sm:px-4 md:px-6 pb-3 sm:pb-4 md:pb-6">
-          <h3 className="font-epilogue font-black text-lg sm:text-2xl md:text-3xl uppercase tracking-tight text-black mb-2 sm:mb-3">
+        <div className="mt-1 sm:mt-2 flex flex-col flex-1 px-2.5 sm:px-4 md:px-6 pb-3 sm:pb-4 md:pb-6">
+          <h3 className="font-epilogue font-black text-base sm:text-2xl md:text-3xl uppercase tracking-tight leading-tight break-words text-black mb-2 sm:mb-3">
             {project.title}
           </h3>
-          <p className="font-inter text-gray-600 text-sm sm:text-base font-medium leading-relaxed mb-3 sm:mb-6">
+          <p className="font-inter text-gray-600 text-xs sm:text-base font-medium leading-relaxed mb-3 sm:mb-6">
             {project.description}
           </p>
 
@@ -86,11 +86,17 @@ export default function Card({ project }: CardProps) {
                 window.open(project.link, "_blank", "noopener,noreferrer");
               }
             }}
-            className={`mt-auto flex items-center justify-center gap-2 cursor-pointer w-full border-2 sm:border-[3px] border-black py-2 sm:py-3 md:py-4 font-space font-bold text-white uppercase tracking-widest text-xs sm:text-sm md:text-base ${project.btnColor} shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all duration-200`}
+            className={`mt-auto flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer w-full border-2 sm:border-[3px] border-black py-2 sm:py-3 md:py-4 font-space font-bold text-white uppercase tracking-widest text-[11px] sm:text-sm md:text-base ${project.btnColor} shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all duration-200`}
           >
-            {project.linkType === "github" && <FaGithub className="text-lg" />}
-            {project.linkType === "website" && <FaGlobe className="text-lg" />}
-            {project.linkType === "itch" && <FaItchIo className="text-xl" />}
+            {project.linkType === "github" && (
+              <FaGithub className="text-base sm:text-lg" />
+            )}
+            {project.linkType === "website" && (
+              <FaGlobe className="text-base sm:text-lg" />
+            )}
+            {project.linkType === "itch" && (
+              <FaItchIo className="text-lg sm:text-xl" />
+            )}
             {project.linkText || "Open File"}
           </button>
         </div>
