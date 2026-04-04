@@ -36,7 +36,7 @@ export default function Card({ project }: CardProps) {
           <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#FFCC00] border-[1.5px] sm:border-2 border-black"></div>
           <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#34C759] border-[1.5px] sm:border-2 border-black"></div>
         </div>
-        <span className="max-w-[65%] truncate text-right font-space font-bold text-[9px] sm:text-xs tracking-widest uppercase text-black">
+        <span className="min-w-0 flex-1 truncate text-right font-space font-bold text-[10px] sm:text-xs tracking-widest uppercase text-black">
           {project.logName}
         </span>
       </div>
@@ -86,7 +86,7 @@ export default function Card({ project }: CardProps) {
                 window.open(project.link, "_blank", "noopener,noreferrer");
               }
             }}
-            className={`mt-auto flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer w-full border-2 sm:border-[3px] border-black py-2 sm:py-3 md:py-4 font-space font-bold text-white uppercase tracking-widest text-[11px] sm:text-sm md:text-base ${project.btnColor} shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all duration-200`}
+            className={`mt-auto flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer w-full border-2 sm:border-[3px] border-black py-2 sm:py-3 md:py-4 font-space font-bold text-white uppercase tracking-widest text-xs sm:text-sm md:text-base ${project.btnColor} shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all duration-200`}
           >
             {project.linkType === "github" && (
               <FaGithub className="text-base sm:text-lg" />
