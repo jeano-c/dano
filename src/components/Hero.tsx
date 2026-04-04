@@ -1,4 +1,4 @@
-import dano from "../assets/imgs/dano.jpg";
+import dano from "../assets/imgs/aaa-1.jpg";
 
 export default function Hero() {
   return (

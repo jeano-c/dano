@@ -1,12 +1,16 @@
 import Card, { type Project } from "./Card";
-
+import ecompare from "../assets/ss/ecom.png";
+import form from "../assets/ss/form.png";
 export default function Projects() {
   const projects: Project[] = [
     {
       id: 1,
+      image: form,
       logName: "CASE_STUDY_001.LOG",
       headerColor: "bg-[#FFD709]",
       title: "Form Builder",
+      link: "https://www.ispecmn.site/",
+      linkText: "website",
       description: "A drag and drop form builder with AI integration.",
       tags: [
         { name: "React Vite", color: "bg-[#A2DFFF]" },
@@ -34,7 +38,10 @@ export default function Projects() {
       id: 3,
       logName: "CASE_STUDY_003.LOG",
       headerColor: "bg-[#FFB7B7]",
+
       title: "Attendance System",
+      linkText: "github",
+      link: "https://github.com/jeano-c/rcy",
       description:
         "An app made with React Native Expo and Appwrite backend; attendance system for students utilizing QR codes and real-time updates.",
       tags: [
@@ -47,7 +54,9 @@ export default function Projects() {
     {
       id: 4,
       logName: "CASE_STUDY_004.LOG",
-      headerColor: "bg-[#E0F2F1]", // Very soft teal/mint (clean on white)
+      headerColor: "bg-[#E0F2F1]",
+      linkText: "github",
+      link: "https://github.com/jeano-c/event_drive",
       title: "Smart POS & Inventory",
       description:
         "A comprehensive POS system built with Django featuring 'Stack Watcher' for intelligent inventory monitoring, Linear Regression for profit forecasting, and AI-generated business summaries.",
@@ -63,6 +72,7 @@ export default function Projects() {
       id: 5,
       logName: "CASE_STUDY_005.LOG",
       headerColor: "bg-[#FFF4E0]",
+
       title: "Busog Banyaga",
       description:
         "A Philippine-themed tower defense game featuring custom-designed sprites of iconic vehicles like jeepneys and tricycles, with unique local-inspired defense mechanics.",
@@ -71,12 +81,14 @@ export default function Projects() {
         { name: "C#", color: "bg-[#D1C4E9]" },
         { name: "Game Dev", color: "bg-[#C8E6C9]" },
       ],
-      btnColor: "bg-[#FFAB91]", // Warm Terracotta
+      btnColor: "bg-[#FFAB91]",
     },
     {
       id: 6,
       logName: "CASE_STUDY_006.LOG",
       headerColor: "bg-[#E3F2FD]",
+      link: "https://busogbanyaga.itch.io/the-chore?brid=33smqJMVFpHF-ANMbNdQgA&fbclid=IwY2xjawQ9z79leHRuA2FlbQIxMABicmlkETFldzFhTk1GQTNCdUxpOHhPc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHl9P4lFvW-9XnYYrGoqcHzVhdHUXUbRmIRRaVbOPQ8m6S4sD4DZn8B6lQYi7_aem_s8uqSaj7kq4QhLaZXvGsyw",
+      linkText: "itch.io",
       title: "The Chore",
       description:
         "A Unity simulation project where daily house chores and school tasks—from washing dishes to daily scrum meetings—are gamified into a series of interactive minigames.",
@@ -114,7 +126,7 @@ export default function Projects() {
         { name: "REST API", color: "bg-[#CFD8DC]" }, // Muted Grey
         { name: "Entity Framework", color: "bg-[#DCEDC8]" }, // Pale Mint
       ],
-      btnColor: "bg-[#475569]", // Deep Slate (sharp contrast on white)
+      btnColor: "bg-[#475569]",
     },
   ];
 
@@ -126,7 +138,7 @@ export default function Projects() {
       {/* --- NEW HEADER DESIGN STARTS HERE --- */}
       <div className="w-full flex flex-col items-center mb-8 md:mb-24">
         {/* Little folder tab detail */}
-        <div className="bg-[#FFB7B7] border-[2px] sm:border-[3px] border-black border-b-0 px-3 sm:px-6 py-1 -mb-[2px] sm:-mb-[3px] z-10 font-space font-bold text-[10px] sm:text-xs uppercase tracking-widest text-black">
+        <div className="bg-[#FFB7B7] border-2 sm:border-[3px] border-black border-b-0 px-3 sm:px-6 py-1 -mb-[2px] sm:-mb-[3px] z-10 font-space font-bold text-[10px] sm:text-xs uppercase tracking-widest text-black">
           Classified Files
         </div>
 
@@ -136,7 +148,7 @@ export default function Projects() {
           <div className="absolute inset-0 bg-black translate-x-1 sm:translate-x-2 translate-y-1 sm:translate-y-2 group-hover:translate-x-2 sm:group-hover:translate-x-3 group-hover:translate-y-2 sm:group-hover:translate-y-3 transition-transform duration-300"></div>
 
           {/* Main Container */}
-          <div className="relative bg-[#FFD709] border-[2px] sm:border-[3px] border-black px-4 sm:px-6 md:px-10 py-2 sm:py-4 md:py-5 group-hover:-translate-y-1 group-hover:-translate-x-1 transition-all duration-300 flex items-center gap-2 md:gap-6">
+          <div className="relative bg-[#FFD709] border-2 sm:border-[3px] border-black px-4 sm:px-6 md:px-10 py-2 sm:py-4 md:py-5 group-hover:-translate-y-1 group-hover:-translate-x-1 transition-all duration-300 flex items-center gap-2 md:gap-6">
             <div className="w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 bg-black rounded-full animate-pulse"></div>
 
             <h2 className="font-epilogue text-xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase italic tracking-widest text-black">

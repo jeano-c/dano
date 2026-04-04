@@ -9,9 +9,12 @@ export interface Project {
   headerColor: string;
   title: string;
   description: string;
-  tags: Tag[]; 
+  tags: Tag[];
   btnColor: string;
   image?: string;
+  video?: string;
+  link?: string;
+  linkText?: string;
 }
 
 interface CardProps {
@@ -20,10 +23,10 @@ interface CardProps {
 
 export default function Card({ project }: CardProps) {
   return (
-    <div className="bg-white border-[2px] sm:border-[3px] border-black flex flex-col w-full h-full shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+    <div className="bg-white border-2 sm:border-[3px] border-black flex flex-col w-full h-full shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
       {/* Mock OS Window Header */}
       <div
-        className={`flex justify-between items-center border-b-[2px] sm:border-b-[3px] border-black px-3 sm:px-4 py-1.5 sm:py-2 ${project.headerColor}`}
+        className={`flex justify-between items-center border-b-2 sm:border-b-[3px] border-black px-3 sm:px-4 py-1.5 sm:py-2 ${project.headerColor}`}
       >
         <div className="flex gap-1.5 sm:gap-2">
           <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#FF3B30] border-[1.5px] sm:border-2 border-black"></div>
@@ -35,18 +38,27 @@ export default function Card({ project }: CardProps) {
         </span>
       </div>
 
-      <div className="p-3 sm:p-4 md:p-6 flex flex-col flex-1 gap-3 sm:gap-4">
-        <div className="w-full h-32 sm:h-40 md:h-64 border-[2px] sm:border-[3px] border-black bg-gray-800 overflow-hidden relative">
-          {project.image && (
+      <div className="flex flex-col flex-1">
+        <div className="w-full h-48 sm:h-56 md:h-64 border-b-2 sm:border-b-[3px] border-black overflow-hidden relative">
+          {project.video ? (
+            <video
+              src={project.video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          ) : project.image ? (
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover grayscale opacity-80"
+              className="w-full h-full object-cover"
             />
-          )}
+          ) : null}
         </div>
 
-        <div className="mt-1 sm:mt-2 flex flex-col flex-1">
+        <div className="mt-1 sm:mt-2 flex flex-col flex-1 px-3 sm:px-4 md:px-6 pb-3 sm:pb-4 md:pb-6">
           <h3 className="font-epilogue font-black text-lg sm:text-2xl md:text-3xl uppercase tracking-tight text-black mb-2 sm:mb-3">
             {project.title}
           </h3>
@@ -66,9 +78,14 @@ export default function Card({ project }: CardProps) {
           </div>
 
           <button
-            className={`mt-auto cursor-pointer w-full border-[2px] sm:border-[3px] border-black py-2 sm:py-3 md:py-4 font-space font-bold text-white uppercase tracking-widest text-xs sm:text-sm md:text-base ${project.btnColor} shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active::translate-y-1 active:shadow-none transition-all duration-200`}
+            onClick={() => {
+              if (project.link) {
+                window.open(project.link, "_blank", "noopener,noreferrer");
+              }
+            }}
+            className={`mt-auto cursor-pointer w-full border-2 sm:border-[3px] border-black py-2 sm:py-3 md:py-4 font-space font-bold text-white uppercase tracking-widest text-xs sm:text-sm md:text-base ${project.btnColor} shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all duration-200`}
           >
-            Open File
+            {project.linkText || "Open File"}
           </button>
         </div>
       </div>
