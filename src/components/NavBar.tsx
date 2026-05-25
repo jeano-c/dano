@@ -30,7 +30,7 @@ export default function NavBar() {
         </div>
 
         <a
-          href="/resumejeanocabanjen.pdf"
+          href="/Jeano_Cabanjen.pdf"
           download="Jeano_Cabanjen_Resume.pdf"
           className="bg-pink-700 text-white border-2 sm:border-3 lg:border-4 border-black font-epilogue font-black uppercase text-[10px] sm:text-xs lg:text-lg px-3 sm:px-4 lg:px-8 py-1 sm:py-1.5 lg:py-2 shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_rgba(0,0,0,1)] lg:shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-[1px_1px_0px_rgba(0,0,0,1)] lg:hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] lg:hover:translate-x-[2px] hover:translate-y-[1px] lg:hover:translate-y-[2px] transition-all cursor-pointer"
         >
