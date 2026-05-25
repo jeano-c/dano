@@ -114,24 +114,24 @@ export default function Projects() {
       description:
         "A social anime discovery platform utilizing the Kitsu.io API. Features include personalized watchlists, real-time commenting systems, and a community 'like' interaction for user discussions.",
       tags: [
-        { name: "Node.js", color: "bg-[#E8F5E9]" }, // Soft Mint
-        { name: "React", color: "bg-[#E1F5FE]" }, // Soft Blue
-        { name: "Kitsu API", color: "bg-[#F8BBD0]" }, // Muted Pink
-        { name: "Express", color: "bg-[#F5F5F5]" }, // Light Grey
+        { name: "Node.js", color: "bg-[#E8F5E9]" },
+        { name: "React", color: "bg-[#E1F5FE]" },
+        { name: "Kitsu API", color: "bg-[#F8BBD0]" },
+        { name: "Express", color: "bg-[#F5F5F5]" },
       ],
-      btnColor: "bg-[#F06292]", // Balanced Rose (visible on white)
+      btnColor: "bg-[#F06292]",
     },
     {
       id: 8,
       logName: "CASE_STUDY_08.LOG",
-      headerColor: "bg-[#F1F5F9]", // Very light slate (clean and modern)
+      headerColor: "bg-[#F1F5F9]",
       title: "Social Engine API",
       description:
         "A high-performance, backend-only REST API built with C# and ASP.NET Core. It manages the core logic for a social platform, including secure authentication, relational data for followers, and complex feed queries.",
       tags: [
-        { name: "C#", color: "bg-[#E1BEE7]" }, // Soft Purple (C# signature)
-        { name: "ASP.NET Core", color: "bg-[#BBDEFB]" }, // Light Blue
-        { name: "REST API", color: "bg-[#CFD8DC]" }, // Muted Grey
+        { name: "C#", color: "bg-[#E1BEE7]" },
+        { name: "ASP.NET Core", color: "bg-[#BBDEFB]" },
+        { name: "REST API", color: "bg-[#CFD8DC]" },
         { name: "Entity Framework", color: "bg-[#DCEDC8]" }, // Pale Mint
       ],
       btnColor: "bg-[#475569]",
