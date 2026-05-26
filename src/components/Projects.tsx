@@ -1,6 +1,10 @@
 import Card, { type Project } from "./Card";
 import ecompare from "../assets/ss/ecom.png";
 import form from "../assets/ss/form.png";
+import ani from "../assets/ss/animu.png";
+import chore from "../assets/ss/chore.png";
+import busog from "../assets/ss/busog.png";
+import POS from "../assets/ss/pos.png";
 export default function Projects() {
   const projects: Project[] = [
     {
@@ -63,6 +67,7 @@ export default function Projects() {
       headerColor: "bg-[#E0F2F1]",
       linkText: "github",
       linkType: "github",
+      image: POS,
       link: "https://github.com/jeano-c/event_drive",
       title: "Smart POS & Inventory",
       description:
@@ -79,14 +84,16 @@ export default function Projects() {
       id: 5,
       logName: "CASE_STUDY_005.LOG",
       headerColor: "bg-[#FFF4E0]",
-
+      link: "https://busog.itch.io/busog-banyaga-tourist-takeover",
+      linkText: "itch.io",
+      linkType: "itch",
+      image: busog,
       title: "Busog Banyaga",
       description:
         "A Philippine-themed tower defense game featuring custom-designed sprites of iconic vehicles like jeepneys and tricycles, with unique local-inspired defense mechanics.",
       tags: [
         { name: "Unity", color: "bg-[#FFCCBC]" },
         { name: "C#", color: "bg-[#D1C4E9]" },
-        { name: "Game Dev", color: "bg-[#C8E6C9]" },
       ],
       btnColor: "bg-[#FFAB91]",
     },
@@ -97,6 +104,7 @@ export default function Projects() {
       link: "https://busogbanyaga.itch.io/the-chore?brid=33smqJMVFpHF-ANMbNdQgA&fbclid=IwY2xjawQ9z79leHRuA2FlbQIxMABicmlkETFldzFhTk1GQTNCdUxpOHhPc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHl9P4lFvW-9XnYYrGoqcHzVhdHUXUbRmIRRaVbOPQ8m6S4sD4DZn8B6lQYi7_aem_s8uqSaj7kq4QhLaZXvGsyw",
       linkText: "itch.io",
       linkType: "itch",
+      image: chore,
       title: "The Chore",
       description:
         "A Unity simulation project where daily house chores and school tasks—from washing dishes to daily scrum meetings—are gamified into a series of interactive minigames.",
@@ -104,13 +112,18 @@ export default function Projects() {
         { name: "Unity", color: "bg-[#BBDEFB]" },
         { name: "C#", color: "bg-[#D1C4E9]" },
       ],
-      btnColor: "bg-[#90CAF9]", // Balanced Blue
+      btnColor: "bg-[#90CAF9]",
     },
     {
       id: 7,
       logName: "CASE_STUDY_07.LOG",
-      headerColor: "bg-[#FCE4EC]", // Very soft pastel pink
+      headerColor: "bg-[#FCE4EC]",
+      image: ani,
+      linkText: "website",
+      linkType: "website",
       title: "Anime Tracker & Community",
+      link: "https://anime-tracker-community.vercel.app/",
+
       description:
         "A social anime discovery platform utilizing the Kitsu.io API. Features include personalized watchlists, real-time commenting systems, and a community 'like' interaction for user discussions.",
       tags: [
@@ -121,21 +134,21 @@ export default function Projects() {
       ],
       btnColor: "bg-[#F06292]",
     },
-    {
-      id: 8,
-      logName: "CASE_STUDY_08.LOG",
-      headerColor: "bg-[#F1F5F9]",
-      title: "Social Engine API",
-      description:
-        "A high-performance, backend-only REST API built with C# and ASP.NET Core. It manages the core logic for a social platform, including secure authentication, relational data for followers, and complex feed queries.",
-      tags: [
-        { name: "C#", color: "bg-[#E1BEE7]" },
-        { name: "ASP.NET Core", color: "bg-[#BBDEFB]" },
-        { name: "REST API", color: "bg-[#CFD8DC]" },
-        { name: "Entity Framework", color: "bg-[#DCEDC8]" }, // Pale Mint
-      ],
-      btnColor: "bg-[#475569]",
-    },
+    // {
+    //   id: 8,
+    //   logName: "CASE_STUDY_08.LOG",
+    //   headerColor: "bg-[#F1F5F9]",
+    //   title: "Social Engine API",
+    //   description:
+    //     "A high-performance, backend-only REST API built with C# and ASP.NET Core. It manages the core logic for a social platform, including secure authentication, relational data for followers, and complex feed queries.",
+    //   tags: [
+    //     { name: "C#", color: "bg-[#E1BEE7]" },
+    //     { name: "ASP.NET Core", color: "bg-[#BBDEFB]" },
+    //     { name: "REST API", color: "bg-[#CFD8DC]" },
+    //     { name: "Entity Framework", color: "bg-[#DCEDC8]" }, // Pale Mint
+    //   ],
+    //   btnColor: "bg-[#475569]",
+    // },
   ];
 
   return (
