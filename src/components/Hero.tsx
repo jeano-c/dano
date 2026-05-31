@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import dano from "../assets/imgs/aaa-1.jpg";
 
 export default function Hero() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -13,7 +14,7 @@ export default function Hero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -22,7 +23,7 @@ export default function Hero() {
     },
   };
 
-  const badgeVariants = {
+  const badgeVariants: Variants = {
     hidden: { opacity: 0, scale: 0.7, rotate: -12 },
     visible: {
       opacity: 1,
@@ -32,7 +33,7 @@ export default function Hero() {
     },
   };
 
-  const profileVariants = {
+  const profileVariants: Variants = {
     hidden: { opacity: 0, scale: 0.9, rotate: -8, y: 20 },
     visible: {
       opacity: 1,

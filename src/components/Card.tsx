@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { FaGithub, FaGlobe, FaItchIo } from "react-icons/fa6";
 
 export interface Tag {
@@ -26,7 +27,7 @@ interface CardProps {
 }
 
 export default function Card({ project }: CardProps) {
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, y: 30, scale: 0.97 },
     visible: {
       opacity: 1,

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
+import type { Variants } from "framer-motion";
 
 export interface Skill {
   name: string;
@@ -16,7 +17,7 @@ interface SkillComProps {
 }
 
 export default function SkillCom({ title, skills }: SkillComProps) {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -26,7 +27,7 @@ export default function SkillCom({ title, skills }: SkillComProps) {
     },
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, y: 20, scale: 0.95 },
     visible: {
       opacity: 1,

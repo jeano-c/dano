@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import Card, { type Project } from "./Card";
 import ecompare from "../assets/ss/ecom.png";
 import form from "../assets/ss/form.png";
@@ -152,7 +153,7 @@ export default function Projects() {
     // },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
