@@ -27,9 +27,8 @@ export default function Certifications() {
       logName: "CASE_001",
       classification: "CONFIDENTIAL",
       skills: [
-        { name: "React v8", color: "bg-[#73D2FA]" },
-        { name: "Hooks", color: "bg-white" },
-        { name: "State", color: "bg-[#FF80A6]" },
+        { name: "React Native", color: "bg-[#73D2FA]" },
+        { name: "Expo", color: "bg-white" },
       ],
     },
   ];
