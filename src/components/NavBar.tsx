@@ -5,6 +5,7 @@ export default function NavBar() {
     { name: "Home", href: "#home" },
     { name: "Stack", href: "#stack" },
     { name: "Projects", href: "#projects" },
+    { name: "Certifications", href: "#certifications" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -19,9 +20,9 @@ export default function NavBar() {
         <motion.div
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
-          className="font-epilogue font-black italic text-base sm:text-xl md:text-2xl lg:text-3xl uppercase tracking-tighter cursor-pointer"
+          className="font-epilogue font-black italic text-[13px] sm:text-xl md:text-2xl lg:text-3xl uppercase tracking-tighter cursor-pointer flex items-center whitespace-nowrap"
         >
-          <span className="bg-black text-white px-1 sm:px-1.5 lg:px-2 py-0.5 lg:py-1 mr-0.5 lg:mr-1">Jeano</span>
+          <span className="bg-black text-white px-1 sm:px-1.5 lg:px-2 py-0.5 lg:py-1 mr-1 lg:mr-2">Jeano</span>
           <span className="text-pink-600 drop-shadow-[1px_1px_0px_rgba(0,0,0,1)] lg:drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]">
             Cabanjen
           </span>

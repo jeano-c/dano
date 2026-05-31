@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
+import Certifications from "./components/Certifications";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Hero />
       <TechStack />
       <Projects />
+      <Certifications />
       <Contact />
     </main>
   );
