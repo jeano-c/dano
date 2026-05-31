@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { FaGithub, FaGlobe, FaItchIo } from "react-icons/fa6";
 
 export interface Tag {
@@ -25,8 +26,26 @@ interface CardProps {
 }
 
 export default function Card({ project }: CardProps) {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.97 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 90, damping: 15 },
+    },
+  };
+
   return (
-    <div className="bg-white border-2 sm:border-[3px] border-black flex flex-col w-full h-full shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+    <motion.div
+      variants={cardVariants}
+      whileHover={{
+        y: -8,
+        scale: 1.015,
+      }}
+      whileTap={{ scale: 0.99 }}
+      className="bg-white border-2 sm:border-[3px] border-black flex flex-col w-full h-full shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300"
+    >
       {/* Mock OS Window Header */}
       <div
         className={`flex justify-between items-center border-b-2 sm:border-b-[3px] border-black px-3 sm:px-4 py-1.5 sm:py-2 ${project.headerColor}`}
@@ -80,13 +99,19 @@ export default function Card({ project }: CardProps) {
             ))}
           </div>
 
-          <button
+          <motion.button
+            whileHover={{
+              y: 2,
+              x: 2,
+              boxShadow: "2px 2px 0px 0px rgba(0,0,0,1)",
+            }}
+            whileTap={{ scale: 0.97 }}
             onClick={() => {
               if (project.link) {
                 window.open(project.link, "_blank", "noopener,noreferrer");
               }
             }}
-            className={`mt-auto flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer w-full border-2 sm:border-[3px] border-black py-2 sm:py-3 md:py-4 font-space font-bold text-white uppercase tracking-widest text-xs sm:text-sm md:text-base ${project.btnColor} shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all duration-200`}
+            className={`mt-auto flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer w-full border-2 sm:border-[3px] border-black py-2 sm:py-3 md:py-4 font-space font-bold text-white uppercase tracking-widest text-xs sm:text-sm md:text-base ${project.btnColor} shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200`}
           >
             {project.linkType === "github" && (
               <FaGithub className="text-base sm:text-lg" />
@@ -98,9 +123,9 @@ export default function Card({ project }: CardProps) {
               <FaItchIo className="text-lg sm:text-xl" />
             )}
             {project.linkText || "Open File"}
-          </button>
+          </motion.button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

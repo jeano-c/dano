@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Card, { type Project } from "./Card";
 import ecompare from "../assets/ss/ecom.png";
 import form from "../assets/ss/form.png";
@@ -83,8 +84,8 @@ export default function Projects() {
     {
       id: 5,
       logName: "CASE_STUDY_005.LOG",
-      headerColor: "bg-[#FFF4E0]",
-      link: "https://busog.itch.io/busog-banyaga-tourist-takeover",
+        headerColor: "bg-[#FFF4E0]",
+        link: "https://busog.itch.io/busog-banyaga-tourist-takeover",
       linkText: "itch.io",
       linkType: "itch",
       image: busog,
@@ -151,6 +152,16 @@ export default function Projects() {
     // },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
     <section
       id="projects"
@@ -186,11 +197,17 @@ export default function Projects() {
       </div>
 
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-14">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.05, margin: "0px 0px -50px 0px" }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-14"
+        >
           {projects.map((project) => (
             <Card key={project.id} project={project} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
 export interface Skill {
@@ -15,6 +16,26 @@ interface SkillComProps {
 }
 
 export default function SkillCom({ title, skills }: SkillComProps) {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 100, damping: 14 },
+    },
+  };
+
   return (
     <div className="mb-10 sm:mb-16 md:mb-24">
       <div className="w-full flex justify-center mb-8 sm:mb-12 md:mb-16">
@@ -32,11 +53,24 @@ export default function SkillCom({ title, skills }: SkillComProps) {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-6 md:gap-8 lg:gap-12 max-w-5xl mx-auto">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.05, margin: "0px 0px -50px 0px" }}
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-6 md:gap-8 lg:gap-12 max-w-5xl mx-auto"
+      >
         {skills.map((skill, index) => (
-          <div
+          <motion.div
             key={index}
-            className={`${skill.bg} ${skill.rotate} border-[2px] sm:border-[3px] border-black p-3 sm:p-5 md:p-8 flex flex-col items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 cursor-pointer group`}
+            variants={cardVariants}
+            whileHover={{
+              y: -6,
+              scale: 1.02,
+              rotate: 0,
+            }}
+            whileTap={{ scale: 0.97 }}
+            className={`${skill.bg} ${skill.rotate} border-[2px] sm:border-[3px] border-black p-3 sm:p-5 md:p-8 flex flex-col items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 cursor-pointer group`}
           >
             <div
               className={`${skill.iconBg} border-[2px] sm:border-[3px] border-black rounded-full w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 flex justify-center items-center text-xl sm:text-2xl md:text-4xl text-black mb-2 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300`}
@@ -44,16 +78,15 @@ export default function SkillCom({ title, skills }: SkillComProps) {
               {skill.icon}
             </div>
 
-
             <h4 className="font-epilogue font-black text-xs sm:text-base md:text-xl lg:text-2xl text-black uppercase tracking-wider mb-1 sm:mb-2 text-center">
               {skill.name}
             </h4>
             <p className="font-space font-bold text-[8px] sm:text-[10px] md:text-xs text-[#757777] uppercase tracking-widest text-center">
               {skill.subtitle}
             </p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

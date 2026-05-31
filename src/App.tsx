@@ -3,54 +3,28 @@ import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
-import { motion } from "framer-motion";
-import type { Variants } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 function App() {
-  const fadeInUp: Variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   return (
-    <main className="bg-[#f8f9fa]">
+    <main className="bg-[#f8f9fa] min-h-screen relative">
+      {/* Scroll Progress Bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1.5 bg-[#B7004B] z-[60] origin-left"
+        style={{ scaleX }}
+      />
       <NavBar />
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={fadeInUp}
-      >
-        <Hero />
-      </motion.div>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={fadeInUp}
-      >
-        <TechStack />
-      </motion.div>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={fadeInUp}
-      >
-        <Projects />
-      </motion.div>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={fadeInUp}
-      >
-        <Contact />
-      </motion.div>
+      <Hero />
+      <TechStack />
+      <Projects />
+      <Contact />
     </main>
   );
 }

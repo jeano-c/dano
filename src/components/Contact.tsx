@@ -1,6 +1,7 @@
-import { FaLinkedin, FaFacebook } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaLinkedin, FaFacebook, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { FaGithub } from "react-icons/fa";
+
 export default function Contact() {
   const socials = [
     {
@@ -29,6 +30,26 @@ export default function Contact() {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 100, damping: 15 },
+    },
+  };
+
   return (
     <section
       id="contact"
@@ -43,14 +64,26 @@ export default function Contact() {
           <div className="flex-1 h-2 sm:h-3 lg:h-4 bg-black"></div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.05, margin: "0px 0px -50px 0px" }}
+          className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8"
+        >
           {socials.map((social, index) => (
-            <a
+            <motion.a
               key={index}
+              variants={itemVariants}
+              whileHover={{
+                y: -6,
+                scale: 1.03,
+              }}
+              whileTap={{ scale: 0.97 }}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${social.bg} border-[2px] sm:border-[3px] border-black px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 flex items-center gap-2 sm:gap-3 md:gap-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 cursor-pointer group`}
+              className={`${social.bg} border-[2px] sm:border-[3px] border-black px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 flex items-center gap-2 sm:gap-3 md:gap-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 cursor-pointer group`}
             >
               <span className="text-white text-xl sm:text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-300">
                 {social.icon}
@@ -58,9 +91,9 @@ export default function Contact() {
               <span className="font-epilogue font-black text-white uppercase tracking-wider text-xs sm:text-sm md:text-lg">
                 {social.name}
               </span>
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
 
         <p className="mt-8 sm:mt-10 md:mt-14 text-center font-space font-bold text-[10px] sm:text-xs md:text-sm text-[#757777] uppercase tracking-widest">
           Let's build something awesome together
