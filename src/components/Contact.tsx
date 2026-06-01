@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { FaLinkedin, FaFacebook, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaFacebook, FaGithub, FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 export default function Contact() {
@@ -16,6 +16,12 @@ export default function Contact() {
       icon: <MdEmail />,
       href: "mailto:cabanjenjeaano@gmail.com",
       bg: "bg-[#EA4335]",
+    },
+    {
+      name: "+63 991 990 3966",
+      icon: <FaPhone />,
+      href: "tel:+639919903966",
+      bg: "bg-[#25D366]",
     },
     {
       name: "Facebook",

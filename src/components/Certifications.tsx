@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import reactnative from "../../src/assets/certificates/reactnative.png";
+import react_test_dom from "../../src/assets/certificates/react_test_dom.png";
+import node from "../../src/assets/certificates/node.png";
 
 export interface Certification {
   id: number;
@@ -29,6 +31,37 @@ export default function Certifications() {
       skills: [
         { name: "React Native", color: "bg-[#73D2FA]" },
         { name: "Expo", color: "bg-white" },
+      ],
+    },
+    {
+      id: 2,
+      title: "React Certificate",
+      issuer: "TestDome",
+      imagePreview: react_test_dom,
+      pdfLink:
+        "https://www.testdome.com/certificates/31ef4efa67364fe389700a0c8f072223",
+      accentColor: "bg-[#FF80A6]",
+      logName: "CASE_002",
+      classification: "VERIFIED",
+      skills: [
+        { name: "React", color: "bg-[#73D2FA]" },
+        { name: "JavaScript", color: "bg-[#FFD709]" },
+      ],
+    },
+    {
+      id: 3,
+      title: "Node JS",
+      issuer: "frontendmasters",
+      imagePreview: node,
+      pdfLink:
+        "https://static.frontendmasters.com/ud/c/4973e208eb/xdzGqkzYQB/api-design-nodejs-v5-frontendmasters.pdf",
+      accentColor: "bg-[#BBF7D0]",
+      logName: "CASE_002",
+      classification: "VERIFIED",
+      skills: [
+        { name: "REST API", color: "bg-[#93C5FD]" }, // light blue
+        { name: "SECURITY", color: "bg-[#86EFAC]" }, // light green
+        { name: "TESTING", color: "bg-[#C4B5FD]" }, // light purple
       ],
     },
   ];
