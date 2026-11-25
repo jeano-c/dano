@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 export default function NavBar() {
   const navigation = [
     { name: "Home", href: "#home" },
+    { name: "Experience", href: "#experience" },
     { name: "Stack", href: "#stack" },
     { name: "Projects", href: "#projects" },
     { name: "Certifications", href: "#certifications" },
@@ -29,13 +30,13 @@ export default function NavBar() {
         </motion.div>
 
         {/* Navigation links - hidden until lg */}
-        <div className="hidden lg:flex flex-row justify-center gap-8">
+        <div className="hidden lg:flex flex-row justify-center gap-5 xl:gap-8">
           {navigation.map((item, index) => (
             <motion.a
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               href={item.href}
-              className="font-epilogue font-black uppercase text-lg text-black border-b-4 border-transparent hover:text-pink-600 hover:border-pink-600 transition-colors pb-1"
+              className="font-epilogue font-black uppercase text-base xl:text-lg text-black border-b-4 border-transparent hover:text-pink-600 hover:border-pink-600 transition-colors pb-1 whitespace-nowrap"
               key={index}
             >
               {item.name}

@@ -79,8 +79,8 @@ export default function Hero() {
           >
             <p className="font-inter font-semibold text-sm sm:text-base md:text-lg text-[#2D2F2F] tracking-wide leading-relaxed">
               I am a full-stack developer with a heavy focus on backend
-              architecture. I build sleek, efficient web applications that solve
-              complex, real-world problems.
+              architecture. I build sleek, efficient web and mobile applications
+              that solve complex, real-world problems.
             </p>
           </motion.div>
           
