@@ -7,12 +7,32 @@ import ani from "../assets/ss/animu.png";
 import chore from "../assets/ss/chore.png";
 import busog from "../assets/ss/busog.png";
 import POS from "../assets/ss/pos.png";
+import comnair from "../assets/ss/comnair.png";
 export default function Projects() {
   const projects: Project[] = [
     {
+      id: 0,
+      image: comnair,
+      logName: "CASE_STUDY_001.LOG",
+      headerColor: "bg-[#BBF7D0]",
+      title: "ComnAir",
+      link: "https://www.getcomnair.site/",
+      linkText: "website",
+      linkType: "website",
+      description:
+        "A full-stack air quality monitoring mobile and web application helping users track real-time air quality and protect their health.",
+      tags: [
+        { name: "React Native", color: "bg-[#A2DFFF]" },
+        { name: "React", color: "bg-[#FFD709]" },
+        { name: "Firebase", color: "bg-[#FFCC80]" },
+        { name: "Air Quality", color: "bg-[#BBF7D0]" },
+      ],
+      btnColor: "bg-[#15803D]",
+    },
+    {
       id: 1,
       image: form,
-      logName: "CASE_STUDY_001.LOG",
+      logName: "CASE_STUDY_002.LOG",
       headerColor: "bg-[#FFD709]",
       title: "Form Builder",
       link: "https://www.ispecmn.site/",
@@ -29,7 +49,7 @@ export default function Projects() {
     },
     {
       id: 2,
-      logName: "CASE_STUDY_002.LOG",
+      logName: "CASE_STUDY_003.LOG",
       headerColor: "bg-[#73D2FA]",
       title: "Ecompare",
       image: ecompare,
@@ -47,7 +67,7 @@ export default function Projects() {
     },
     {
       id: 3,
-      logName: "CASE_STUDY_003.LOG",
+      logName: "CASE_STUDY_004.LOG",
       headerColor: "bg-[#FFB7B7]",
 
       title: "Attendance System",
@@ -65,7 +85,7 @@ export default function Projects() {
     },
     {
       id: 4,
-      logName: "CASE_STUDY_004.LOG",
+      logName: "CASE_STUDY_005.LOG",
       headerColor: "bg-[#E0F2F1]",
       linkText: "github",
       linkType: "github",
@@ -84,7 +104,7 @@ export default function Projects() {
     },
     {
       id: 5,
-      logName: "CASE_STUDY_005.LOG",
+      logName: "CASE_STUDY_006.LOG",
         headerColor: "bg-[#FFF4E0]",
         link: "https://busog.itch.io/busog-banyaga-tourist-takeover",
       linkText: "itch.io",
@@ -101,7 +121,7 @@ export default function Projects() {
     },
     {
       id: 6,
-      logName: "CASE_STUDY_006.LOG",
+      logName: "CASE_STUDY_007.LOG",
       headerColor: "bg-[#E3F2FD]",
       link: "https://busogbanyaga.itch.io/the-chore?brid=33smqJMVFpHF-ANMbNdQgA&fbclid=IwY2xjawQ9z79leHRuA2FlbQIxMABicmlkETFldzFhTk1GQTNCdUxpOHhPc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHl9P4lFvW-9XnYYrGoqcHzVhdHUXUbRmIRRaVbOPQ8m6S4sD4DZn8B6lQYi7_aem_s8uqSaj7kq4QhLaZXvGsyw",
       linkText: "itch.io",
@@ -118,7 +138,7 @@ export default function Projects() {
     },
     {
       id: 7,
-      logName: "CASE_STUDY_07.LOG",
+      logName: "CASE_STUDY_008.LOG",
       headerColor: "bg-[#FCE4EC]",
       image: ani,
       linkText: "website",
